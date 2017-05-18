@@ -7,12 +7,15 @@
 //
 
 #import "SXPodBaseAppDelegate.h"
-
+#import <SXPodBase/CKKRefreshVC.h>
+#import "CKKHeaderRefresh.h"
 @implementation SXPodBaseAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    /// 待解决 代码刷新可刷新， 手动下拉刷新，不能结束刷新，也不会调用刷新方法
+    CKKTableVC.headRefreshView = [[CKKHeaderRefresh alloc] init];
+    
     return YES;
 }
 

@@ -8,6 +8,15 @@
 
 @import UIKit;
 
-@interface SXPodBaseViewController : UIViewController
+@interface SXPodBaseViewController : CKKTableVC
+
+/**
+ 手动下拉刷新
+ */
+- (void)startHeaderRefresh;
+
+@property (nonatomic) NSInteger current_page;
+
+- (void)loadDataAtPage:(NSInteger)page;
 
 @end

@@ -7,23 +7,47 @@
 //
 
 #import "SXPodBaseViewController.h"
-
+#import "MJRefresh.h"
 @interface SXPodBaseViewController ()
 
 @end
 
 @implementation SXPodBaseViewController
-
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    // 都是从1开始的
+    self.current_page = 1;
+    [self headRefreshView].refreshingTarget = self;
+    [self addpull2RefreshWithTableView:self.tableView WithIsInset:NO];
+    [self addPush2LoadMoreWithTableView:self.tableView WithIsInset:NO];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - public
+- (void)startHeaderRefresh {
+    [self pull2RefreshWithScrollerView:self.tableView];
+}
+
+
+- (void)pull2RefreshWithScrollerView:(UIScrollView *)scrollerView {
+    [self loadDataAtPage:1];
+}
+- (void)push2LoadMoreWithScrollerView:(UIScrollView *)scrollerView {
+    [self loadDataAtPage:self.current_page + 1];
+}
+
+- (void)loadDataAtPage:(NSInteger)page {
+
+    NSLog(@"---- 页面 -> %@ 开始刷新 ---", NSStringFromClass([self class]));
+}
+#pragma mark - sf
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return [UITableViewCell new];
 }
 
 @end

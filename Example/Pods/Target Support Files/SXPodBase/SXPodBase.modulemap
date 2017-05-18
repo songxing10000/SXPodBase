@@ -1,0 +1,6 @@
+framework module SXPodBase {
+  umbrella header "SXPodBase-umbrella.h"
+
+  export *
+  module * { export * }
+}

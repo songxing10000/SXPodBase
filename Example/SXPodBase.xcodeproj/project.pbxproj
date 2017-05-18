@@ -22,6 +22,9 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		9887CC461ECDE26500403956 /* CKKFooterRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 9887CC411ECDE26500403956 /* CKKFooterRefresh.m */; };
+		9887CC471ECDE26500403956 /* CKKHeaderRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 9887CC431ECDE26500403956 /* CKKHeaderRefresh.m */; };
+		9887CC481ECDE26500403956 /* SmallRedDotContainersLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9887CC451ECDE26500403956 /* SmallRedDotContainersLayer.m */; };
 		AB4638A4F2DA59927AD0DF51 /* Pods_SXPodBase_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7706F2FC0BBCD736B94A0561 /* Pods_SXPodBase_Example.framework */; };
 		C6C085BBA941BF79F8ECC8DB /* Pods_SXPodBase_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C20ED0D3E45F1439943C9A5 /* Pods_SXPodBase_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -37,8 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		367CCC30FC0ED3E61F1F9F69 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		483F6287F16697D45BE87ABB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		367CCC30FC0ED3E61F1F9F69 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		483F6287F16697D45BE87ABB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* SXPodBase_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SXPodBase_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,11 +63,17 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7706F2FC0BBCD736B94A0561 /* Pods_SXPodBase_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SXPodBase_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A50769406326734486B9F83 /* SXPodBase.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SXPodBase.podspec; path = ../SXPodBase.podspec; sourceTree = "<group>"; };
+		7A50769406326734486B9F83 /* SXPodBase.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SXPodBase.podspec; path = ../SXPodBase.podspec; sourceTree = "<group>"; };
 		7A9AB1D1E8768E8796D3F7CE /* Pods-SXPodBase_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SXPodBase_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SXPodBase_Tests/Pods-SXPodBase_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		7C20ED0D3E45F1439943C9A5 /* Pods_SXPodBase_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SXPodBase_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C2960D01F6624A074789CB1 /* Pods-SXPodBase_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SXPodBase_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SXPodBase_Example/Pods-SXPodBase_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		9887CC401ECDE26500403956 /* CKKFooterRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKKFooterRefresh.h; sourceTree = "<group>"; };
+		9887CC411ECDE26500403956 /* CKKFooterRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKKFooterRefresh.m; sourceTree = "<group>"; };
+		9887CC421ECDE26500403956 /* CKKHeaderRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKKHeaderRefresh.h; sourceTree = "<group>"; };
+		9887CC431ECDE26500403956 /* CKKHeaderRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKKHeaderRefresh.m; sourceTree = "<group>"; };
+		9887CC441ECDE26500403956 /* SmallRedDotContainersLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallRedDotContainersLayer.h; sourceTree = "<group>"; };
+		9887CC451ECDE26500403956 /* SmallRedDotContainersLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallRedDotContainersLayer.m; sourceTree = "<group>"; };
 		B0DD02883224C3FC8B1C53CF /* Pods-SXPodBase_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SXPodBase_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SXPodBase_Example/Pods-SXPodBase_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B6D8AC0B0956FCFE074B7847 /* Pods-SXPodBase_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SXPodBase_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SXPodBase_Tests/Pods-SXPodBase_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +141,7 @@
 		6003F593195388D20070C39A /* Example for SXPodBase */ = {
 			isa = PBXGroup;
 			children = (
+				9887CC3F1ECDE26500403956 /* XHeader */,
 				6003F59C195388D20070C39A /* SXPodBaseAppDelegate.h */,
 				6003F59D195388D20070C39A /* SXPodBaseAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -183,6 +193,19 @@
 				367CCC30FC0ED3E61F1F9F69 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		9887CC3F1ECDE26500403956 /* XHeader */ = {
+			isa = PBXGroup;
+			children = (
+				9887CC401ECDE26500403956 /* CKKFooterRefresh.h */,
+				9887CC411ECDE26500403956 /* CKKFooterRefresh.m */,
+				9887CC421ECDE26500403956 /* CKKHeaderRefresh.h */,
+				9887CC431ECDE26500403956 /* CKKHeaderRefresh.m */,
+				9887CC441ECDE26500403956 /* SmallRedDotContainersLayer.h */,
+				9887CC451ECDE26500403956 /* SmallRedDotContainersLayer.m */,
+			);
+			path = XHeader;
 			sourceTree = "<group>";
 		};
 		C310A2DFC8776CAEF9ED672A /* Pods */ = {
@@ -394,8 +417,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9887CC461ECDE26500403956 /* CKKFooterRefresh.m in Sources */,
+				9887CC481ECDE26500403956 /* SmallRedDotContainersLayer.m in Sources */,
 				6003F59E195388D20070C39A /* SXPodBaseAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* SXPodBaseViewController.m in Sources */,
+				9887CC471ECDE26500403956 /* CKKHeaderRefresh.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,7 +505,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -512,7 +538,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

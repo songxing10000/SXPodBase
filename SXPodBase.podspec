@@ -7,36 +7,48 @@
 #
 
 Pod::Spec.new do |s|
+#pod名称
   s.name             = 'SXPodBase'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of SXPodBase.'
+#pod版本
+  s.version          = '0.0.1'
+#简介，需要更改，不然会报警告
+  s.summary          = 'SXPodBase personal development of the project and the accumulation of open source projects'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
-
+#详细介绍，要比简介长
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+                        SXPodBase personal development of the project and the accumulation of open source projects 
                        DESC
-
-  s.homepage         = 'https://github.com/dfpo/SXPodBase'
+# 项目主页
+  s.homepage         = 'https://github.com/songxing10000/SXPodBase'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+#协议
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'dfpo' => 'songxing10000@163.com' }
-  s.source           = { :git => 'https://github.com/dfpo/SXPodBase.git', :tag => s.version.to_s }
+# 开发者信息
+  s.author           = { 'dfpo' => 'songxing10000@live.cn' }
+#仓库地址
+  s.source           = { :git => 'https://github.com/songxing10000/SXPodBase.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
+# 最低版本
   s.ios.deployment_target = '8.0'
-
+# 库文件
   s.source_files = 'SXPodBase/Classes/**/*'
-  
+#资源目录
   # s.resource_bundles = {
   #   'SXPodBase' => ['SXPodBase/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
+#依赖的framework
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+# 依赖的第三方库
+  s.dependency 'YYModel'
+  s.dependency 'Masonry'
+  s.dependency 'MJRefresh'
+  s.dependency 'MBProgressHUD'
+  s.dependency 'DZNEmptyDataSet'
 end
