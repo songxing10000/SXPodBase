@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SXPodBase_Example' do
+  pod 'SXPodBase', :path => '../'
+
+  target 'SXPodBase_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
