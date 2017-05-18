@@ -14,17 +14,18 @@
  */
 @interface CKKTableVC : CKKBaseVC <UITableViewDelegate,UITableViewDataSource>
 
-@property (nonatomic, class) MJRefreshHeader *headRefreshView;
-@property (nonatomic, class) MJRefreshFooter *footRefreshView;;
+@property (nonatomic, class) Class headRefreshViewClass;
+
+@property (nonatomic, class) Class footRefreshViewClass;
+/// 下拉刷新视图
+@property (nonatomic,readonly) MJRefreshHeader *headRefreshView;
+/// 上提刷新视图
+@property (nonatomic,readonly) MJRefreshFooter *footRefreshView;
 /**
  tableView，没有就生成，有就自动获取sb中的tableView,当然也可以连线
  */
 @property (nonatomic) IBOutlet UITableView *tableView;
 
-/// 下拉刷新视图
-@property (nonatomic,readonly) MJRefreshHeader *headRefreshView;
-/// 上提刷新视图
-@property (nonatomic,readonly) MJRefreshFooter *footRefreshView;
 
 
 /// 注册下拉刷新功能，一般只用时第二个参数一律传NO

@@ -18,33 +18,30 @@
 @end
 @implementation CKKTableVC
 
-static MJRefreshHeader *_headRefreshView = nil;
-static MJRefreshFooter *_footRefreshView = nil;
-
-+ (MJRefreshHeader *)headRefreshView {
-
-    return _headRefreshView;
-}
-+ (void)setHeadRefreshView:(MJRefreshHeader *)headRefreshView {
+static Class _headRefreshViewClass = nil;
+static Class _footRefreshViewClass = nil;
++ (Class)headRefreshViewClass {
     
-    if (headRefreshView != nil) {
+    return _headRefreshViewClass;
+}
++(void)setHeadRefreshViewClass:(Class)headRefreshViewClass {
+    
+    if (headRefreshViewClass != nil) {
         
-        _headRefreshView = headRefreshView;
-        _headRefreshView.refreshingTarget = self;
-        _headRefreshView.refreshingAction = @selector(pull2RefreshWithScrollerView:);
+        _headRefreshViewClass = headRefreshViewClass;
     }
 }
-+ (MJRefreshFooter *)footRefreshView {
+
++(Class)footRefreshViewClass {
     
-    return _footRefreshView;
+    return _footRefreshViewClass;
 }
-+ (void)setFootRefreshView:(MJRefreshFooter *)footRefreshView {
+
++ (void)setFootRefreshViewClass:(Class)footRefreshViewClass {
     
-    if (footRefreshView) {
+    if (footRefreshViewClass != nil) {
         
-        _footRefreshView = footRefreshView;
-        _footRefreshView.refreshingTarget = self;
-        _headRefreshView.refreshingAction = @selector(push2LoadMoreWithScrollerView:);
+        _footRefreshViewClass = footRefreshViewClass;
     }
 }
 - (void)viewDidLoad {
@@ -144,8 +141,12 @@ static MJRefreshFooter *_footRefreshView = nil;
 - (void)addpull2RefreshWithTableView:(UIScrollView *)tableView WithIsInset:(BOOL)isInset{
     
     
-    MJRefreshHeader *header = [[self class ] headRefreshView];
+    MJRefreshHeader *header = [[[[self class] headRefreshViewClass] alloc] init];
+//    [[[[[self class ] headRefreshView] class] alloc] init];
 //    [CKKHeaderRefresh headerWithRefreshingTarget:self refreshingAction:@selector(pull2RefreshWithScrollerView:)];
+    header.refreshingTarget = self;
+    header.refreshingAction = @selector(pull2RefreshWithScrollerView:);
+
     tableView.mj_header = header;
     _headRefreshView = tableView.mj_header;
     [tableView.mj_header endRefreshing];
@@ -173,12 +174,13 @@ static MJRefreshFooter *_footRefreshView = nil;
 
 ///   添加上提加载
 - (void)addPush2LoadMoreWithTableView:(UITableView *)tableView WithIsInset:(BOOL)isInset{
-    MJRefreshFooter *footer = [[self class] footRefreshView];
+    MJRefreshFooter *footer = [[[[[self class] footRefreshViewClass] class] alloc] init];
 //    [CKKFooterRefresh footerWithRefreshingTarget:self refreshingAction:@selector(push2LoadMoreWithScrollerView:)];
 //    [CKKRefresh footerWithRefreshingTarget:self refreshingAction:@selector(push2LoadMoreWithScrollerView:)];
     footer.refreshingTarget = self;
+    footer.refreshingAction = @selector(push2LoadMoreWithScrollerView:);
     tableView.mj_footer = footer;
-    footer.automaticallyHidden = YES;
+//    footer.automaticallyHidden = YES;
     
     _footRefreshView = tableView.mj_footer;
     [tableView.mj_footer endRefreshing];
