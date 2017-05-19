@@ -1,24 +1,29 @@
 {
   "name": "SXPodBase",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "summary": "SXPodBase personal development of the project and the accumulation of open source projects",
-  "description": "测试pod的详细介绍",
-  "homepage": "https://github.com/dfpo/SXPodBase",
+  "description": "SXPodBase personal development of the project and the accumulation of open source projects",
+  "homepage": "https://github.com/songxing10000/SXPodBase",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "dfpo": "songxing10000@163.com"
+    "dfpo": "songxing10000@live.cn"
   },
   "source": {
-    "git": "https://github.com/dfpo/SXPodBase.git",
-    "tag": "0.0.1"
+    "git": "https://github.com/songxing10000/SXPodBase.git",
+    "tag": "0.0.2"
   },
   "platforms": {
     "ios": "8.0"
   },
   "source_files": "SXPodBase/Classes/**/*",
+  "resource_bundles": {
+    "SXPodBase": [
+      "SXPodBase/Assets/*.png"
+    ]
+  },
   "dependencies": {
     "YYModel": [
 

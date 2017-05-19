@@ -11,6 +11,8 @@
 
 @interface CKKBaseVC : UIViewController
 
+@property (nonatomic, class) UIColor *defaultBackgroundColor;
+
 /**
  当前最顶顶部的控制器的view
  */

@@ -13,4 +13,6 @@
  */
 @interface CKKStaticTVC : UITableViewController
 
+@property (nonatomic, class) UIColor *defaultBackgroundColor;
+
 @end

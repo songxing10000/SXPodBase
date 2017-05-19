@@ -15,7 +15,17 @@
 @end
 
 @implementation CKKBaseVC
-
+static UIColor *_defaultBackgroundColor = nil;
++ (UIColor *)defaultBackgroundColor {
+    
+    return _defaultBackgroundColor;
+}
++(void)setDefaultBackgroundColor:(UIColor *)defaultBackgroundColor {
+    if (defaultBackgroundColor != nil) {
+        
+        _defaultBackgroundColor = defaultBackgroundColor;
+    }
+}
 #pragma mark - life cycle
 -(void)dealloc {
     
@@ -34,6 +44,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    UIColor *dc = [self class].defaultBackgroundColor;
+    if (dc) {
+        
+        self.view.backgroundColor = dc;
+    }
     if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)]) {
         
         [self setEdgesForExtendedLayout:UIRectEdgeNone];

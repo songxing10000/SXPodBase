@@ -38,9 +38,9 @@ Pod::Spec.new do |s|
 # 库文件
   s.source_files = 'SXPodBase/Classes/**/*'
 #资源目录
-  # s.resource_bundles = {
-  #   'SXPodBase' => ['SXPodBase/Assets/*.png']
-  # }
+  s.resource_bundles = {
+     'SXPodBase' => ['SXPodBase/Assets/*.png']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
 #依赖的framework
