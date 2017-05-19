@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 #pod名称
   s.name             = 'SXPodBase'
 #pod版本
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
 #简介，需要更改，不然会报警告
   s.summary          = 'SXPodBase personal development of the project and the accumulation of open source projects'
 
