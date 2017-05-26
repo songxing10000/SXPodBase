@@ -3,7 +3,7 @@
 //  Chekuaikuai
 //
 //  Created by CKK on 16/4/14.
-//  Copyright © 2016年 北京壹号车科技有限公司. All rights reserved.
+//  Copyright © 2016年 dfpo. All rights reserved.
 //
 
 #import "CKKNavigationController.h"
