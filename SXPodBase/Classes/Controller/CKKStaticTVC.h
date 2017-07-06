@@ -1,8 +1,8 @@
 //
 //  CKKStaticTVC.h
-//  CKK_SJ
+//  dfpo
 //
-//  Created by MobileUser on 2016/12/16.
+//  Created by dfpo on 2016/12/16.
 //  Copyright © 2016年 dfpo. All rights reserved.
 //
 

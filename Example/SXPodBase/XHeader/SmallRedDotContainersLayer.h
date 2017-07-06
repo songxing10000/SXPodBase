@@ -1,8 +1,8 @@
 //
 //  SmallRedDotContainersLayer.h
-//  CKK_SJ
+//  dfpo
 //
-//  Created by MobileUser on 2017/1/19.
+//  Created by dfpo on 2017/1/19.
 //  Copyright © 2017年 dfpo. All rights reserved.
 //
 
