@@ -130,6 +130,21 @@ static NSDictionary *_navigatioinBarAppearanceBarItemTitleTextAttributes = nil;
     }
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return self.visibleViewController.preferredStatusBarStyle;
+}
+
+- (CGSize)preferredContentSize {
+    return self.visibleViewController.preferredContentSize;
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return self.visibleViewController.prefersStatusBarHidden;
+}
+
+- (UIStatusBarAnimation)preferredStatusBarUpdateAnimation {
+    return self.visibleViewController.preferredStatusBarUpdateAnimation;
+}
 
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     

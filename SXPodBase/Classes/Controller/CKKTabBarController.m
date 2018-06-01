@@ -100,6 +100,33 @@ static NSArray *_childVCInfoDicts = nil;
         self.tabBar.backgroundColor = tabBarC;
     }
 }
+- (BOOL)shouldAutorotate {
+    return self.selectedViewController.shouldAutorotate;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return self.selectedViewController.supportedInterfaceOrientations;
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+    return self.selectedViewController.preferredInterfaceOrientationForPresentation;
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return self.selectedViewController.preferredStatusBarStyle;
+}
+
+- (CGSize)preferredContentSize {
+    return self.selectedViewController.preferredContentSize;
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return self.selectedViewController.prefersStatusBarHidden;
+}
+
+- (UIStatusBarAnimation)preferredStatusBarUpdateAnimation {
+    return self.selectedViewController.preferredStatusBarUpdateAnimation;
+}
 
 #pragma mark - <UITabBarControllerDelegate>
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UINavigationController *)viewController {
